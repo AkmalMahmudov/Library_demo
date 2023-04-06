@@ -18,7 +18,7 @@ class LibraryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_library)
 
         if (applicationContext.packageName.startsWith("com.akmal")) {
-            Toast.makeText(this, "version:1.3 advanced", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "version:1.4", Toast.LENGTH_SHORT).show()
             initCLickActions()
         } else {
             throw AuthenticatorException("f**k off, mate")

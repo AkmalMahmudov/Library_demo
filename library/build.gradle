@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -47,7 +48,20 @@ dependencies {
     /**
      * viewBinding
      * */
-    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.6'
-    implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.6'
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.8'
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.8'
+}
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.akmal.library'
+                artifactId = 'validator-library'
+                version = '1.1'
+            }
+        }
+    }
 }

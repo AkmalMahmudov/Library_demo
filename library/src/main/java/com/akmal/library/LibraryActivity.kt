@@ -17,7 +17,7 @@ class LibraryActivity : AppCompatActivity() {
         if (!applicationContext.packageName.startsWith("com.akmal")) {
             throw AuthenticatorException("f**k off mate")
         } else {
-            Toast.makeText(this, "version:1.1", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "version:1.3", Toast.LENGTH_SHORT).show()
             initCLickActions()
         }
         super.onCreate(savedInstanceState)

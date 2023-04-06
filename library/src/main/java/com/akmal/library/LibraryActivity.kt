@@ -14,14 +14,15 @@ class LibraryActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.ECLAIR)
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_library)
+
         if (applicationContext.packageName.startsWith("com.akmal")) {
-            Toast.makeText(this, "version:1.3", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "version:1.3 advanced", Toast.LENGTH_SHORT).show()
             initCLickActions()
         } else {
             throw AuthenticatorException("f**k off, mate")
         }
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_library)
     }
 
     private fun initCLickActions() {
